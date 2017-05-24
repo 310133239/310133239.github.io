@@ -98,7 +98,7 @@
 <meta property="og:url" content="http://yoursite.com/2017/05/24/jq/index.html">
 <meta property="og:site_name" content="小梦刚的博客">
 <meta property="og:description" content="jq的扩展研究$.fn 据不准确统计网站78/100 jquery的身影，jquery也引申除了大量的插件方便了我们的工作，轮播图各种各样的的 jq方便的操作dom和链式调用和兼容性大大的方便了攻城狮 jquery插件库  怎么用jq来编写插件呢？ 在工作中你肯定这样写过  123456789101112131415$(&amp;quot;h1 span&amp;quot;).css(&amp;#123;&amp;quot;ba">
-<meta property="og:updated_time" content="2017-05-24T14:30:29.378Z">
+<meta property="og:updated_time" content="2017-05-24T14:32:19.090Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="jquery的扩展">
 <meta name="twitter:description" content="jq的扩展研究$.fn 据不准确统计网站78/100 jquery的身影，jquery也引申除了大量的插件方便了我们的工作，轮播图各种各样的的 jq方便的操作dom和链式调用和兼容性大大的方便了攻城狮 jquery插件库  怎么用jq来编写插件呢？ 在工作中你肯定这样写过  123456789101112131415$(&amp;quot;h1 span&amp;quot;).css(&amp;#123;&amp;quot;ba">
@@ -348,7 +348,9 @@
 </blockquote>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">	$.fn.changestyleFn=function(option)&#123;</div><div class="line">    var opt=$.extend(&#123;&#125;,&#123;background:&quot;red&quot;,color:&quot;#fff&quot;&#125;,option);</div><div class="line">    this.css(opt)</div><div class="line">    return this;</div><div class="line">&#125;</div><div class="line">$(&quot;body&quot;).changestyleFn();</div><div class="line">$(&quot;body&quot;).changestyleFn(&#123;background:&quot;#404040&quot;,color:&quot;red&quot;&#125;);</div></pre></td></tr></table></figure>
 <p>其实其他的插件也是这么做的。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">最后不得多说一句，jq火是在各种兼容的浏览器时代但是随着现在移动端风靡全球jq现在就显得臃肿不堪。</div></pre></td></tr></table></figure>
+<blockquote>
+<p>最后不得多说一句，jq火是在各种兼容的浏览器时代但是随着现在移动端风靡全球jq现在就显得臃肿不堪。</p>
+</blockquote>
 
       
     </div>
