@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2017-05-24T14:32:19.090Z</updated>
+  <updated>2017-05-31T16:47:10.569Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -14,6 +14,57 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>vue简单入门</title>
+    <link href="http://yoursite.com/2017/06/01/vuearc/"/>
+    <id>http://yoursite.com/2017/06/01/vuearc/</id>
+    <published>2017-05-31T16:25:39.000Z</published>
+    <updated>2017-05-31T16:47:10.569Z</updated>
+    
+    <content type="html"><![CDATA[<h3 id="vue实战教程"><a href="#vue实战教程" class="headerlink" title="vue实战教程"></a>vue实战教程</h3><blockquote>
+<p>jq现在越来越笨重mvvm框架层出不求。现在开始Vue的教程吧。vue作者是尤雨溪，作者这样说vue只需要一段html代码就上一片json数据就可以完成入门非常简单</p>
+</blockquote>
+<h4 id="声明式渲染"><a href="#声明式渲染" class="headerlink" title="声明式渲染"></a>声明式渲染</h4><blockquote>
+<p>其实声明式渲染就是{ {} }表达式</p>
+</blockquote>
+<p><em>html</em><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">&lt;div id=&quot;vue&quot;&gt;</div><div class="line">&#123; &#123;message&#125; &#125;</div><div class="line">&lt;/div&gt;</div></pre></td></tr></table></figure></p>
+<p><em>js</em><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">var app=new Vue(&#123;</div><div class="line">el:&quot;#vue&quot;,//选择器</div><div class="line">data:&#123;</div><div class="line">	message:&quot;hello word&quot;//数据</div><div class="line">&#125;</div><div class="line"></div><div class="line">&#125;)</div></pre></td></tr></table></figure></p>
+<p><em>结果</em></p>
+<blockquote>
+<p>hello word</p>
+</blockquote>
+<h4 id="vue-bind"><a href="#vue-bind" class="headerlink" title="vue-bind"></a>vue-bind</h4><blockquote>
+<p><code>v-bind</code>成为指令我们可以动态的改变元素的属性 扩展ht<code>html</code>标签功能属性</p>
+</blockquote>
+<h4 id="data数据"><a href="#data数据" class="headerlink" title="data数据"></a>data数据</h4><blockquote>
+<p>可以放string number boolean array json(object)等类型数据</p>
+</blockquote>
+<h4 id="条件与循环"><a href="#条件与循环" class="headerlink" title="条件与循环"></a>条件与循环</h4><blockquote>
+<p>在公司中我们有的时候看到php的小伙伴用think php 的if else 和for循环我们的模板是不是很羡慕，我们vue也提供了这样的书写方法，有人说vue的条件渲染与php 的think php比起来如何 :-D我不说话</p>
+</blockquote>
+<h5 id="条件"><a href="#条件" class="headerlink" title="条件"></a>条件</h5><p><em>html</em><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">&lt;div id=&quot;app3&quot;&gt;</div><div class="line">	&lt;p v-if=&quot;see&quot;&gt;你看到的吗&lt;/p&gt;</div><div class="line">&lt;/div&gt;</div><div class="line"> var app3=new Vue(&#123;</div><div class="line"> 	el:&quot;#app3&quot;,</div><div class="line"> 	data:&#123;</div><div class="line"> 		see:true</div><div class="line"> 	&#125;</div><div class="line"> </div><div class="line"> &#125;)</div></pre></td></tr></table></figure></p>
+<h5 id="v-for循环列表"><a href="#v-for循环列表" class="headerlink" title="v-for循环列表"></a>v-for循环列表</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div></pre></td><td class="code"><pre><div class="line">var app=new Vue(&#123;</div><div class="line">		el:&quot;#app&quot;,</div><div class="line">		data:&#123;</div><div class="line">			list :[</div><div class="line">				&#123;text:&apos;我爱编程&apos;&#125;,</div><div class="line">				&#123;text:&apos;编程是我快乐&apos;&#125;,</div><div class="line">				&#123;text:&apos;学习vue&apos;&#125;</div><div class="line">			]</div><div class="line">		&#125;</div><div class="line">	&#125;)</div><div class="line">	var app2=new Vue(&#123;</div><div class="line">		el:&quot;#app2&quot;,</div><div class="line">		data:&#123;</div><div class="line">			see:true</div><div class="line">		&#125;</div><div class="line">	&#125;)</div></pre></td></tr></table></figure>
+<h5 id="处理用户的事件"><a href="#处理用户的事件" class="headerlink" title="处理用户的事件"></a>处理用户的事件</h5><blockquote>
+<p>为了可以和用户进行交互vue增加了on进行处理</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div></pre></td><td class="code"><pre><div class="line">&lt;div id=&quot;app3&quot;&gt; </div><div class="line">			&lt;p&gt;&#123; &#123;message&#125; &#125;&lt;/p&gt;</div><div class="line">			&lt;button @click=&quot;reversefn&quot;&gt;翻转&lt;/button&gt;</div><div class="line">&lt;/div&gt;</div><div class="line"></div><div class="line">var app3=new Vue(&#123;</div><div class="line">		el:&quot;#app3&quot;,</div><div class="line">		data:&#123;</div><div class="line">			message:&quot;123456789&quot;</div><div class="line">		&#125;,</div><div class="line">		methods:&#123;</div><div class="line">			reversefn:function()&#123;</div><div class="line">				console.log(this.message);</div><div class="line">				this.message=this.message.split(&quot;&quot;).reverse().join(&quot;&quot;);</div><div class="line">			&#125;</div><div class="line">		&#125;</div><div class="line">	&#125;)</div></pre></td></tr></table></figure>
+<h5 id="数据双向绑定"><a href="#数据双向绑定" class="headerlink" title="数据双向绑定"></a>数据双向绑定</h5><blockquote>
+<p>vue提供了数据双向绑定什么是数据双向绑定呢？我们在第一节的时候实现了数据单向绑定当我们更新model时viwe可以自动进行更新<br>双向绑定是我们更新了model层数据view会进行更新，用户更新viwe数据我们model层会进行更新vue可以轻松的实现表单输入和应用状态的双向绑定</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">&lt;div id=&quot;app4&quot;&gt;</div><div class="line">		&lt;input type=&quot;text&quot;  v-model=&quot;message&quot;/&gt;</div><div class="line">		&#123; &#123;message&#125; &#125;</div><div class="line">&lt;/div&gt;</div><div class="line">var app4=new Vue(&#123;</div><div class="line">		el:&quot;#app4&quot;,</div><div class="line">		data:&#123;</div><div class="line">			message:&quot;123456789&quot;</div><div class="line">		&#125;</div><div class="line">	&#125;)</div></pre></td></tr></table></figure>
+<h4 id="组件"><a href="#组件" class="headerlink" title="组件"></a>组件</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div></pre></td><td class="code"><pre><div class="line">&lt;div id=&quot;app7&quot;&gt;</div><div class="line">		&lt;ol&gt;</div><div class="line">			&lt;todo-item v-for=&quot;value of list&quot; v-bind:todo=&quot;value&quot; &gt;&lt;/todo-item&gt;</div><div class="line">		&lt;/ol&gt;</div><div class="line">	&lt;/div&gt;</div><div class="line">//声明一个模板</div><div class="line">	var commonp=Vue.component(&apos;todo-item&apos;,&#123;</div><div class="line">		props:[&apos;todo&apos;],</div><div class="line">		template:&apos;&lt;li &gt;&#123; &#123;todo.text&#125; &#125;&lt;/li&gt;&apos;</div><div class="line">		</div><div class="line">	&#125;)</div><div class="line">var app7=new Vue(&#123;</div><div class="line">		el:&quot;#app7&quot;,</div><div class="line">		data:&#123;</div><div class="line">			list:[</div><div class="line">				&#123;text:&apos;我爱编程心情好好&apos;&#125;,</div><div class="line">				&#123;text:&apos;i love coding&apos;&#125;,</div><div class="line">				&#123;text:&apos;谢谢你&apos;&#125;</div><div class="line">			]</div><div class="line">		&#125;</div><div class="line">		</div><div class="line">		</div><div class="line">	&#125;)</div></pre></td></tr></table></figure>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;h3 id=&quot;vue实战教程&quot;&gt;&lt;a href=&quot;#vue实战教程&quot; class=&quot;headerlink&quot; title=&quot;vue实战教程&quot;&gt;&lt;/a&gt;vue实战教程&lt;/h3&gt;&lt;blockquote&gt;
+&lt;p&gt;jq现在越来越笨重mvvm框架层出不求。现在开始Vue的教程吧。vue作者
+    
+    </summary>
+    
+    
+  </entry>
   
   <entry>
     <title>jquery的扩展</title>
