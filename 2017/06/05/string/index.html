@@ -1,0 +1,848 @@
+<!doctype html>
+
+
+
+  
+
+
+<html class="theme-next pisces use-motion" lang="zh-Hans">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+
+  
+  
+  <link rel="stylesheet" media="all" href="/lib/Han/dist/han.min.css?v=3.3">
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.1" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="javascript," />
+
+
+
+
+
+  <link rel="alternate" href="/atom.xml" title="小梦刚的博客" type="application/atom+xml" />
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.1.1" />
+
+
+
+
+
+
+<meta name="description" content="javascript总结之stringString 类型是字符串;string.length; 字符串有length的方法为字符串的长度我们经常在开发中使用string.length进行循环做一些操作12var str=&amp;quot;hello word&amp;quot;;alert(str.length);//10  访问字符串的方法 js中用于访问字符串的方法是charAt()和charCodeAt(">
+<meta name="keywords" content="javascript">
+<meta property="og:type" content="article">
+<meta property="og:title" content="string">
+<meta property="og:url" content="http://yoursite.com/2017/06/05/string/index.html">
+<meta property="og:site_name" content="小梦刚的博客">
+<meta property="og:description" content="javascript总结之stringString 类型是字符串;string.length; 字符串有length的方法为字符串的长度我们经常在开发中使用string.length进行循环做一些操作12var str=&amp;quot;hello word&amp;quot;;alert(str.length);//10  访问字符串的方法 js中用于访问字符串的方法是charAt()和charCodeAt(">
+<meta property="og:updated_time" content="2017-06-05T15:53:09.021Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="string">
+<meta name="twitter:description" content="javascript总结之stringString 类型是字符串;string.length; 字符串有length的方法为字符串的长度我们经常在开发中使用string.length进行循环做一些操作12var str=&amp;quot;hello word&amp;quot;;alert(str.length);//10  访问字符串的方法 js中用于访问字符串的方法是charAt()和charCodeAt(">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Pisces',
+    sidebar: {"position":"left","display":"posts","offset":12,"offset_float":0,"b2t":false,"scrollpercent":false},
+    fancybox: true,
+    motion: true,
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://yoursite.com/2017/06/05/string/"/>
+
+
+
+
+
+  <title>string | 小梦刚的博客</title>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+
+
+
+
+
+  <script type="text/javascript">
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "https://hm.baidu.com/hm.js?2a69181792c52284ac128ae2a3ec9e53";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">小梦刚的博客</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle">前端工程师</p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/06/05/string/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="小梦刚">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="小梦刚的博客">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">string</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-06-05T22:24:02+08:00">
+                2017-06-05
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+            <span class="post-meta-divider">|</span>
+            <span class="page-pv"><i class="fa fa-file-o"></i> 浏览
+            <span class="busuanzi-value" id="busuanzi_value_page_pv" ></span>次
+            </span>
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    <div class="post-body han-init-context" itemprop="articleBody">
+
+      
+      
+
+      
+        <h3 id="javascript总结之string"><a href="#javascript总结之string" class="headerlink" title="javascript总结之string"></a>javascript总结之string</h3><h4 id="String-类型是字符串"><a href="#String-类型是字符串" class="headerlink" title="String 类型是字符串;"></a>String 类型是字符串;</h4><h4 id="string-length"><a href="#string-length" class="headerlink" title="string.length;"></a>string.length;</h4><blockquote>
+<p>字符串有length的方法为字符串的长度我们经常在开发中使用string.length进行循环做一些操作<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">var str=&quot;hello word&quot;;</div><div class="line">alert(str.length);//10</div></pre></td></tr></table></figure></p>
+</blockquote>
+<h4 id="访问字符串的方法"><a href="#访问字符串的方法" class="headerlink" title="访问字符串的方法"></a>访问字符串的方法</h4><blockquote>
+<p>js中用于访问字符串的方法是<code>charAt()</code>和<code>charCodeAt()</code> 这两个方法都接受一个参数一个基于0的字符位置。charAt返回字符串位置坐在的字符串。charCodeAt();返回字符串所在位置字符串的字符串编码。</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">var str=&quot;hello word&quot;;</div><div class="line">alert(str.charCodeAt(1));//10</div><div class="line">alert(str.charAt(1));//e</div></pre></td></tr></table></figure>
+<h4 id="字符串操作方法"><a href="#字符串操作方法" class="headerlink" title="字符串操作方法"></a>字符串操作方法</h4><h5 id="concat字符串拼接方法"><a href="#concat字符串拼接方法" class="headerlink" title="concat字符串拼接方法"></a>concat字符串拼接方法</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">var str=&quot;123&quot;;</div><div class="line">var str3=str.concat(&quot;789&quot;);</div><div class="line">alert(str3)//123789</div></pre></td></tr></table></figure>
+<h5 id="slice、substr、substring"><a href="#slice、substr、substring" class="headerlink" title="slice、substr、substring"></a>slice、substr、substring</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">这三个方法都会返回一个操作字符串后的字符串,</div><div class="line">而且还接受一个或者两个参数第一个代表字符串开始的位置，</div><div class="line">第二个数字为(对于slice和substring的第二个参数指的是字符串结束的位置)。</div><div class="line">而substr()的第二个参数为字符串的长度</div></pre></td></tr></table></figure>
+<h4 id="字符串位置方法"><a href="#字符串位置方法" class="headerlink" title="字符串位置方法"></a>字符串位置方法</h4><h5 id="有两个方法可以从字符串中查找方法"><a href="#有两个方法可以从字符串中查找方法" class="headerlink" title="有两个方法可以从字符串中查找方法"></a>有两个方法可以从字符串中查找方法</h5><h5 id="indexOf"><a href="#indexOf" class="headerlink" title="indexOf()"></a>indexOf()</h5><blockquote>
+<p>两个方法都是从一个字符串中搜索给定的字符串然后返回字符串的位置<br>indexOf();返回符合搜索结果的字符串的位置从前往后查找<br>lastIndexof 返回符合搜索结果的字符串的位置从后往前查找返回从前往后的位置</p>
+</blockquote>
+<h5 id="lastIndexOf"><a href="#lastIndexOf" class="headerlink" title="lastIndexOf()"></a>lastIndexOf()</h5><blockquote>
+<p>indexOf 接受第二个参数 表示从当前的位置向后查找<br>lastIndexOf 接受第二个参数 表示从当前的位置向前查找<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">var str=&quot;hello word&quot;;</div><div class="line">alert(str.indexOf(&quot;o&quot;));</div><div class="line">alert(str.lastIndexOf(&quot;o&quot;));</div><div class="line">alert(str.indexOf(&quot;o&quot;,5));</div><div class="line">alert(str.lastIndexOf(&quot;o&quot;,4));</div></pre></td></tr></table></figure></p>
+</blockquote>
+<h4 id="trim-的方法"><a href="#trim-的方法" class="headerlink" title="trim()的方法"></a>trim()的方法</h4><blockquote>
+<p>这个方法可以删除前后的空格返回一个没有空格的字符串</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">var str=&quot;    hello word   &quot;;</div><div class="line">console.log(str.trim())</div></pre></td></tr></table></figure>
+<h4 id="大小写转换方法；"><a href="#大小写转换方法；" class="headerlink" title="大小写转换方法；"></a>大小写转换方法；</h4><p>####toLowerCase();</p>
+<blockquote>
+<p>转换为小写字符串</p>
+<p>####toUpperCase();<br>转换为大写字符串<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">var str=&quot;hello word&quot;;</div><div class="line">var str1=&quot;HELLO WORD&quot;;</div><div class="line">console.log(str.toUpperCase());</div><div class="line">console.log(str1.toLowerCase());</div></pre></td></tr></table></figure></p>
+</blockquote>
+<h5 id="字符串模式匹配方法"><a href="#字符串模式匹配方法" class="headerlink" title="字符串模式匹配方法"></a>字符串模式匹配方法</h5><h5 id="match接受一个参数正则或者字符串"><a href="#match接受一个参数正则或者字符串" class="headerlink" title="match接受一个参数正则或者字符串"></a>match接受一个参数正则或者字符串</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">var text=&quot;cat,bat,sat,fat&quot;;</div><div class="line">var pattern=/.at/;</div><div class="line">var matches=text.match(pattern);</div></pre></td></tr></table></figure>
+<blockquote>
+<p>match 方法返回一个数组符合条件的字符串，<br>index所在的index位置<br>input用本的字符串</p>
+</blockquote>
+<h5 id="search"><a href="#search" class="headerlink" title="search"></a>search</h5><blockquote>
+<p>接受一个正则找到返回索引没找到返回-1；</p>
+</blockquote>
+<h5 id="repalce"><a href="#repalce" class="headerlink" title="repalce"></a>repalce</h5><blockquote>
+<p>接受两个参数第一个可以是正则,第二个可以是一个参数或者函数<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div></pre></td><td class="code"><pre><div class="line">var str = &quot;12xsxsx45xsx78xsxsom&quot;;</div><div class="line"></div><div class="line">	var str1 = str.replace(/[123456789]/g,function(match,op,text)&#123;</div><div class="line">				switch (match) &#123;</div><div class="line">					case &quot;1&quot;:</div><div class="line">						return &quot;a&quot;;</div><div class="line">					case &quot;2&quot;:</div><div class="line">						return &quot;b&quot;;</div><div class="line">					case &quot;3&quot;:</div><div class="line">						return &quot;c&quot;;</div><div class="line">					case &quot;4&quot;:</div><div class="line">						return &quot;d&quot;;</div><div class="line">					case &quot;5&quot;:</div><div class="line">						return &quot;e&quot;;</div><div class="line">					case &quot;6&quot;:</div><div class="line">						return &quot;f&quot;;</div><div class="line">					case &quot;7&quot;:</div><div class="line">						return &quot;g&quot;;</div><div class="line">					case &quot;8&quot;:</div><div class="line">						return &quot;h&quot;;</div><div class="line">					case &quot;9&quot;:</div><div class="line">						return &quot;i&quot;;</div><div class="line">				&#125;</div><div class="line">		&#125;);</div><div class="line"></div><div class="line">console.log(str1)</div></pre></td></tr></table></figure></p>
+</blockquote>
+<h5 id="split"><a href="#split" class="headerlink" title="split"></a>split</h5><blockquote>
+<p>接受两个参数第一个参数依靠什么来进行切割字符串 第二个参数可不填为数组的长度</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">var str = &quot;1,4,5,6,3,7,8,9,10,11,12&quot;;</div><div class="line">var arr=str.split(&quot;,&quot;,6)</div><div class="line">console.log(arr)</div></pre></td></tr></table></figure>
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/javascript/" rel="tag"># javascript</a>
+          
+        </div>
+      
+
+      
+        
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2017/06/02/arclist/" rel="next" title="富兰克林练习写作的方法">
+                <i class="fa fa-chevron-left"></i> 富兰克林练习写作的方法
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+        
+  <div class="bdsharebuttonbox">
+    <a href="#" class="bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a>
+    <a href="#" class="bds_douban" data-cmd="douban" title="分享到豆瓣网"></a>
+    <a href="#" class="bds_sqq" data-cmd="sqq" title="分享到QQ好友"></a>
+    <a href="#" class="bds_qzone" data-cmd="qzone" title="分享到QQ空间"></a>
+    <a href="#" class="bds_weixin" data-cmd="weixin" title="分享到微信"></a>
+    <a href="#" class="bds_tieba" data-cmd="tieba" title="分享到百度贴吧"></a>
+    <a href="#" class="bds_twi" data-cmd="twi" title="分享到Twitter"></a>
+    <a href="#" class="bds_fbook" data-cmd="fbook" title="分享到Facebook"></a>
+    <a href="#" class="bds_more" data-cmd="more"></a>
+    <a class="bds_count" data-cmd="count"></a>
+  </div>
+  <script>
+    window._bd_share_config = {
+      "common": {
+        "bdText": "",
+        "bdMini": "2",
+        "bdMiniList": false,
+        "bdPic": ""
+      },
+      "share": {
+        "bdSize": "16",
+        "bdStyle": "0"
+      },
+      "image": {
+        "viewList": ["tsina", "douban", "sqq", "qzone", "weixin", "twi", "fbook"],
+        "viewText": "分享到：",
+        "viewSize": "16"
+      }
+    }
+  </script>
+
+<script>
+  with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='//bdimg.share.baidu.com/static/api/js/share.js?cdnversion='+~(-new Date()/36e5)];
+</script>
+
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="/images/avatar.png"
+               alt="小梦刚" />
+          <p class="site-author-name" itemprop="name">小梦刚</p>
+           
+              <p class="site-description motion-element" itemprop="description">前端攻城狮</p>
+          
+        </div>
+        <nav class="site-state motion-element">
+
+          
+            <div class="site-state-item site-state-posts">
+              <a href="/archives">
+                <span class="site-state-item-count">10</span>
+                <span class="site-state-item-name">日志</span>
+              </a>
+            </div>
+          
+
+          
+
+          
+            
+            
+            <div class="site-state-item site-state-tags">
+              
+                <span class="site-state-item-count">1</span>
+                <span class="site-state-item-name">标签</span>
+              
+            </div>
+          
+
+        </nav>
+
+        
+          <div class="feed-link motion-element">
+            <a href="/atom.xml" rel="alternate">
+              <i class="fa fa-rss"></i>
+              RSS
+            </a>
+          </div>
+        
+
+        <div class="links-of-author motion-element">
+          
+            
+              <span class="links-of-author-item">
+                <a href="https://github.com/310133239/310133239.github.io" target="_blank" title="GitHub">
+                  
+                    <i class="fa fa-fw fa-github"></i>
+                  
+                  GitHub
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="https://twitter.com/code_tank" target="_blank" title="Twitter">
+                  
+                    <i class="fa fa-fw fa-twitter"></i>
+                  
+                  Twitter
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="http://weibo.com/xmgln" target="_blank" title="Weibo">
+                  
+                    <i class="fa fa-fw fa-weibo"></i>
+                  
+                  Weibo
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="https://www.zhihu.com/people/xiao-meng-gang" target="_blank" title="zhihu">
+                  
+                    <i class="fa fa-fw fa-globe"></i>
+                  
+                  zhihu
+                </a>
+              </span>
+            
+          
+        </div>
+
+        
+        
+
+        
+        
+
+        
+
+
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#javascript总结之string"><span class="nav-number">1.</span> <span class="nav-text">javascript总结之string</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#String-类型是字符串"><span class="nav-number">1.1.</span> <span class="nav-text">String 类型是字符串;</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#string-length"><span class="nav-number">1.2.</span> <span class="nav-text">string.length;</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#访问字符串的方法"><span class="nav-number">1.3.</span> <span class="nav-text">访问字符串的方法</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#字符串操作方法"><span class="nav-number">1.4.</span> <span class="nav-text">字符串操作方法</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#concat字符串拼接方法"><span class="nav-number">1.4.1.</span> <span class="nav-text">concat字符串拼接方法</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#slice、substr、substring"><span class="nav-number">1.4.2.</span> <span class="nav-text">slice、substr、substring</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#字符串位置方法"><span class="nav-number">1.5.</span> <span class="nav-text">字符串位置方法</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#有两个方法可以从字符串中查找方法"><span class="nav-number">1.5.1.</span> <span class="nav-text">有两个方法可以从字符串中查找方法</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#indexOf"><span class="nav-number">1.5.2.</span> <span class="nav-text">indexOf()</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#lastIndexOf"><span class="nav-number">1.5.3.</span> <span class="nav-text">lastIndexOf()</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#trim-的方法"><span class="nav-number">1.6.</span> <span class="nav-text">trim()的方法</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#大小写转换方法；"><span class="nav-number">1.7.</span> <span class="nav-text">大小写转换方法；</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#字符串模式匹配方法"><span class="nav-number">1.7.1.</span> <span class="nav-text">字符串模式匹配方法</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#match接受一个参数正则或者字符串"><span class="nav-number">1.7.2.</span> <span class="nav-text">match接受一个参数正则或者字符串</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#search"><span class="nav-number">1.7.3.</span> <span class="nav-text">search</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#repalce"><span class="nav-number">1.7.4.</span> <span class="nav-text">repalce</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#split"><span class="nav-number">1.7.5.</span> <span class="nav-text">split</span></a></li></ol></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy; 
+  <span itemprop="copyrightYear">2017</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">小梦刚</span>
+</div>
+
+
+<div class="theme-info">
+  小梦刚的个人博客
+</div>
+
+
+
+        
+<div class="busuanzi-count">
+  <script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+  
+    <span class="site-uv">
+      <i class="fa fa-user"></i> 访问人数
+      <span class="busuanzi-value" id="busuanzi_value_site_uv"></span>
+      
+    </span>
+  
+
+  
+    <span class="site-pv">
+      <i class="fa fa-eye"></i> 总访问量
+      <span class="busuanzi-value" id="busuanzi_value_site_pv"></span>
+      次
+    </span>
+  
+</div>
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+<a href="https://github.com/310133239"><img style="position: absolute; top: 0; right: 0; border: 0;" src="https://camo.githubusercontent.com/e7bbb0521b397edbd5fe43e7f760759336b5e05f/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f72696768745f677265656e5f3030373230302e706e67" alt="Fork me on GitHub" data-canonical-src="https://s3.amazonaws.com/github/ribbons/forkme_right_green_007200.png"></a>
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+  
+  <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+  
+  <script type="text/javascript" src="true"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.1"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.1"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.1"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.1"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.1"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.1"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.1"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+<script>
+(function(){
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';        
+    }
+    else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+    }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+</script>
+
+
+  
+
+  
+
+  
+
+  
+  <script type="text/javascript" color="201,201,201" opacity='1'  count="99" src="//cdn.bootcss.com/canvas-nest.js/1.0.0/canvas-nest.min.js"></script>
+  
+</body>
+</html>
