@@ -327,8 +327,7 @@
 
       
         
-          
-            <h3 id="javascript总结之string"><a href="#javascript总结之string" class="headerlink" title="javascript总结之string"></a>javascript总结之string</h3><h4 id="String-类型是字符串"><a href="#String-类型是字符串" class="headerlink" title="String 类型是字符串;"></a>String 类型是字符串;</h4><h4 id="string-length"><a href="#string-length" class="headerlink" title="string.length;"></a>string.length;</h4><blockquote>
+          <h3 id="javascript总结之string"><a href="#javascript总结之string" class="headerlink" title="javascript总结之string"></a>javascript总结之string</h3><h4 id="String-类型是字符串"><a href="#String-类型是字符串" class="headerlink" title="String 类型是字符串;"></a>String 类型是字符串;</h4><h4 id="string-length"><a href="#string-length" class="headerlink" title="string.length;"></a>string.length;</h4><blockquote>
 <p>字符串有length的方法为字符串的长度我们经常在开发中使用string.length进行循环做一些操作<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">var str=&quot;hello word&quot;;</div><div class="line">alert(str.length);//10</div></pre></td></tr></table></figure></p>
 </blockquote>
 <h4 id="访问字符串的方法"><a href="#访问字符串的方法" class="headerlink" title="访问字符串的方法"></a>访问字符串的方法</h4><blockquote>
@@ -336,38 +335,14 @@
 </blockquote>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">var str=&quot;hello word&quot;;</div><div class="line">alert(str.charCodeAt(1));//10</div><div class="line">alert(str.charAt(1));//e</div></pre></td></tr></table></figure>
 <h4 id="字符串操作方法"><a href="#字符串操作方法" class="headerlink" title="字符串操作方法"></a>字符串操作方法</h4><h5 id="concat字符串拼接方法"><a href="#concat字符串拼接方法" class="headerlink" title="concat字符串拼接方法"></a>concat字符串拼接方法</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">var str=&quot;123&quot;;</div><div class="line">var str3=str.concat(&quot;789&quot;);</div><div class="line">alert(str3)//123789</div></pre></td></tr></table></figure>
-<h5 id="slice、substr、substring"><a href="#slice、substr、substring" class="headerlink" title="slice、substr、substring"></a>slice、substr、substring</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">这三个方法都会返回一个操作字符串后的字符串,</div><div class="line">而且还接受一个或者两个参数第一个代表字符串开始的位置，</div><div class="line">第二个数字为(对于slice和substring的第二个参数指的是字符串结束的位置)。</div><div class="line">而substr()的第二个参数为字符串的长度</div><div class="line">&lt;!--more--&gt;</div></pre></td></tr></table></figure>
-<h4 id="字符串位置方法"><a href="#字符串位置方法" class="headerlink" title="字符串位置方法"></a>字符串位置方法</h4><h5 id="有两个方法可以从字符串中查找方法"><a href="#有两个方法可以从字符串中查找方法" class="headerlink" title="有两个方法可以从字符串中查找方法"></a>有两个方法可以从字符串中查找方法</h5><h5 id="indexOf"><a href="#indexOf" class="headerlink" title="indexOf()"></a>indexOf()</h5><blockquote>
-<p>两个方法都是从一个字符串中搜索给定的字符串然后返回字符串的位置<br>indexOf();返回符合搜索结果的字符串的位置从前往后查找<br>lastIndexof 返回符合搜索结果的字符串的位置从后往前查找返回从前往后的位置</p>
-</blockquote>
-<h5 id="lastIndexOf"><a href="#lastIndexOf" class="headerlink" title="lastIndexOf()"></a>lastIndexOf()</h5><blockquote>
-<p>indexOf 接受第二个参数 表示从当前的位置向后查找<br>lastIndexOf 接受第二个参数 表示从当前的位置向前查找<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">var str=&quot;hello word&quot;;</div><div class="line">alert(str.indexOf(&quot;o&quot;));</div><div class="line">alert(str.lastIndexOf(&quot;o&quot;));</div><div class="line">alert(str.indexOf(&quot;o&quot;,5));</div><div class="line">alert(str.lastIndexOf(&quot;o&quot;,4));</div></pre></td></tr></table></figure></p>
-</blockquote>
-<h4 id="trim-的方法"><a href="#trim-的方法" class="headerlink" title="trim()的方法"></a>trim()的方法</h4><blockquote>
-<p>这个方法可以删除前后的空格返回一个没有空格的字符串</p>
-</blockquote>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">var str=&quot;    hello word   &quot;;</div><div class="line">console.log(str.trim())</div></pre></td></tr></table></figure>
-<h4 id="大小写转换方法；"><a href="#大小写转换方法；" class="headerlink" title="大小写转换方法；"></a>大小写转换方法；</h4><p>####toLowerCase();</p>
-<blockquote>
-<p>转换为小写字符串</p>
-<p>####toUpperCase();<br>转换为大写字符串<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">var str=&quot;hello word&quot;;</div><div class="line">var str1=&quot;HELLO WORD&quot;;</div><div class="line">console.log(str.toUpperCase());</div><div class="line">console.log(str1.toLowerCase());</div></pre></td></tr></table></figure></p>
-</blockquote>
-<h5 id="字符串模式匹配方法"><a href="#字符串模式匹配方法" class="headerlink" title="字符串模式匹配方法"></a>字符串模式匹配方法</h5><h5 id="match接受一个参数正则或者字符串"><a href="#match接受一个参数正则或者字符串" class="headerlink" title="match接受一个参数正则或者字符串"></a>match接受一个参数正则或者字符串</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">var text=&quot;cat,bat,sat,fat&quot;;</div><div class="line">var pattern=/.at/;</div><div class="line">var matches=text.match(pattern);</div></pre></td></tr></table></figure>
-<blockquote>
-<p>match 方法返回一个数组符合条件的字符串，<br>index所在的index位置<br>input用本的字符串</p>
-</blockquote>
-<h5 id="search"><a href="#search" class="headerlink" title="search"></a>search</h5><blockquote>
-<p>接受一个正则找到返回索引没找到返回-1；</p>
-</blockquote>
-<h5 id="repalce"><a href="#repalce" class="headerlink" title="repalce"></a>repalce</h5><blockquote>
-<p>接受两个参数第一个可以是正则,第二个可以是一个参数或者函数<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div></pre></td><td class="code"><pre><div class="line">var str = &quot;12xsxsx45xsx78xsxsom&quot;;</div><div class="line"></div><div class="line">	var str1 = str.replace(/[123456789]/g,function(match,op,text)&#123;</div><div class="line">				switch (match) &#123;</div><div class="line">					case &quot;1&quot;:</div><div class="line">						return &quot;a&quot;;</div><div class="line">					case &quot;2&quot;:</div><div class="line">						return &quot;b&quot;;</div><div class="line">					case &quot;3&quot;:</div><div class="line">						return &quot;c&quot;;</div><div class="line">					case &quot;4&quot;:</div><div class="line">						return &quot;d&quot;;</div><div class="line">					case &quot;5&quot;:</div><div class="line">						return &quot;e&quot;;</div><div class="line">					case &quot;6&quot;:</div><div class="line">						return &quot;f&quot;;</div><div class="line">					case &quot;7&quot;:</div><div class="line">						return &quot;g&quot;;</div><div class="line">					case &quot;8&quot;:</div><div class="line">						return &quot;h&quot;;</div><div class="line">					case &quot;9&quot;:</div><div class="line">						return &quot;i&quot;;</div><div class="line">				&#125;</div><div class="line">		&#125;);</div><div class="line"></div><div class="line">console.log(str1)</div></pre></td></tr></table></figure></p>
-</blockquote>
-<h5 id="split"><a href="#split" class="headerlink" title="split"></a>split</h5><blockquote>
-<p>接受两个参数第一个参数依靠什么来进行切割字符串 第二个参数可不填为数组的长度</p>
-</blockquote>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">var str = &quot;1,4,5,6,3,7,8,9,10,11,12&quot;;</div><div class="line">var arr=str.split(&quot;,&quot;,6)</div><div class="line">console.log(arr)</div></pre></td></tr></table></figure>
-
-          
+<h5 id="slice、substr、substring"><a href="#slice、substr、substring" class="headerlink" title="slice、substr、substring"></a>slice、substr、substring</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">这三个方法都会返回一个操作字符串后的字符串,</div><div class="line">而且还接受一个或者两个参数第一个代表字符串开始的位置，</div><div class="line">第二个数字为(对于slice和substring的第二个参数指的是字符串结束的位置)。</div><div class="line">而substr()的第二个参数为字符串的长度</div></pre></td></tr></table></figure>
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2017/06/05/string/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
     </div>

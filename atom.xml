@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2017-06-05T15:55:14.476Z</updated>
+  <updated>2017-06-05T15:58:11.883Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -20,7 +20,7 @@
     <link href="http://yoursite.com/2017/06/05/string/"/>
     <id>http://yoursite.com/2017/06/05/string/</id>
     <published>2017-06-05T14:24:02.000Z</published>
-    <updated>2017-06-05T15:55:14.476Z</updated>
+    <updated>2017-06-05T15:58:11.883Z</updated>
     
     <content type="html"><![CDATA[<h3 id="javascript总结之string"><a href="#javascript总结之string" class="headerlink" title="javascript总结之string"></a>javascript总结之string</h3><h4 id="String-类型是字符串"><a href="#String-类型是字符串" class="headerlink" title="String 类型是字符串;"></a>String 类型是字符串;</h4><h4 id="string-length"><a href="#string-length" class="headerlink" title="string.length;"></a>string.length;</h4><blockquote>
 <p>字符串有length的方法为字符串的长度我们经常在开发中使用string.length进行循环做一些操作<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">var str=&quot;hello word&quot;;</div><div class="line">alert(str.length);//10</div></pre></td></tr></table></figure></p>
@@ -30,7 +30,8 @@
 </blockquote>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">var str=&quot;hello word&quot;;</div><div class="line">alert(str.charCodeAt(1));//10</div><div class="line">alert(str.charAt(1));//e</div></pre></td></tr></table></figure>
 <h4 id="字符串操作方法"><a href="#字符串操作方法" class="headerlink" title="字符串操作方法"></a>字符串操作方法</h4><h5 id="concat字符串拼接方法"><a href="#concat字符串拼接方法" class="headerlink" title="concat字符串拼接方法"></a>concat字符串拼接方法</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">var str=&quot;123&quot;;</div><div class="line">var str3=str.concat(&quot;789&quot;);</div><div class="line">alert(str3)//123789</div></pre></td></tr></table></figure>
-<h5 id="slice、substr、substring"><a href="#slice、substr、substring" class="headerlink" title="slice、substr、substring"></a>slice、substr、substring</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">这三个方法都会返回一个操作字符串后的字符串,</div><div class="line">而且还接受一个或者两个参数第一个代表字符串开始的位置，</div><div class="line">第二个数字为(对于slice和substring的第二个参数指的是字符串结束的位置)。</div><div class="line">而substr()的第二个参数为字符串的长度</div><div class="line">&lt;!--more--&gt;</div></pre></td></tr></table></figure>
+<h5 id="slice、substr、substring"><a href="#slice、substr、substring" class="headerlink" title="slice、substr、substring"></a>slice、substr、substring</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">这三个方法都会返回一个操作字符串后的字符串,</div><div class="line">而且还接受一个或者两个参数第一个代表字符串开始的位置，</div><div class="line">第二个数字为(对于slice和substring的第二个参数指的是字符串结束的位置)。</div><div class="line">而substr()的第二个参数为字符串的长度</div></pre></td></tr></table></figure>
+<a id="more"></a>
 <h4 id="字符串位置方法"><a href="#字符串位置方法" class="headerlink" title="字符串位置方法"></a>字符串位置方法</h4><h5 id="有两个方法可以从字符串中查找方法"><a href="#有两个方法可以从字符串中查找方法" class="headerlink" title="有两个方法可以从字符串中查找方法"></a>有两个方法可以从字符串中查找方法</h5><h5 id="indexOf"><a href="#indexOf" class="headerlink" title="indexOf()"></a>indexOf()</h5><blockquote>
 <p>两个方法都是从一个字符串中搜索给定的字符串然后返回字符串的位置<br>indexOf();返回符合搜索结果的字符串的位置从前往后查找<br>lastIndexof 返回符合搜索结果的字符串的位置从后往前查找返回从前往后的位置</p>
 </blockquote>
@@ -64,7 +65,15 @@
     
     <summary type="html">
     
-      &lt;h3 id=&quot;javascript总结之string&quot;&gt;&lt;a href=&quot;#javascript总结之string&quot; class=&quot;headerlink&quot; title=&quot;javascript总结之string&quot;&gt;&lt;/a&gt;javascript总结之string&lt;/h3&gt;&lt;h4 i
+      &lt;h3 id=&quot;javascript总结之string&quot;&gt;&lt;a href=&quot;#javascript总结之string&quot; class=&quot;headerlink&quot; title=&quot;javascript总结之string&quot;&gt;&lt;/a&gt;javascript总结之string&lt;/h3&gt;&lt;h4 id=&quot;String-类型是字符串&quot;&gt;&lt;a href=&quot;#String-类型是字符串&quot; class=&quot;headerlink&quot; title=&quot;String 类型是字符串;&quot;&gt;&lt;/a&gt;String 类型是字符串;&lt;/h4&gt;&lt;h4 id=&quot;string-length&quot;&gt;&lt;a href=&quot;#string-length&quot; class=&quot;headerlink&quot; title=&quot;string.length;&quot;&gt;&lt;/a&gt;string.length;&lt;/h4&gt;&lt;blockquote&gt;
+&lt;p&gt;字符串有length的方法为字符串的长度我们经常在开发中使用string.length进行循环做一些操作&lt;br&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;2&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;var str=&amp;quot;hello word&amp;quot;;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;alert(str.length);//10&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h4 id=&quot;访问字符串的方法&quot;&gt;&lt;a href=&quot;#访问字符串的方法&quot; class=&quot;headerlink&quot; title=&quot;访问字符串的方法&quot;&gt;&lt;/a&gt;访问字符串的方法&lt;/h4&gt;&lt;blockquote&gt;
+&lt;p&gt;js中用于访问字符串的方法是&lt;code&gt;charAt()&lt;/code&gt;和&lt;code&gt;charCodeAt()&lt;/code&gt; 这两个方法都接受一个参数一个基于0的字符位置。charAt返回字符串位置坐在的字符串。charCodeAt();返回字符串所在位置字符串的字符串编码。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;2&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;3&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;var str=&amp;quot;hello word&amp;quot;;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;alert(str.charCodeAt(1));//10&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;alert(str.charAt(1));//e&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;h4 id=&quot;字符串操作方法&quot;&gt;&lt;a href=&quot;#字符串操作方法&quot; class=&quot;headerlink&quot; title=&quot;字符串操作方法&quot;&gt;&lt;/a&gt;字符串操作方法&lt;/h4&gt;&lt;h5 id=&quot;concat字符串拼接方法&quot;&gt;&lt;a href=&quot;#concat字符串拼接方法&quot; class=&quot;headerlink&quot; title=&quot;concat字符串拼接方法&quot;&gt;&lt;/a&gt;concat字符串拼接方法&lt;/h5&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;2&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;3&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;var str=&amp;quot;123&amp;quot;;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;var str3=str.concat(&amp;quot;789&amp;quot;);&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;alert(str3)//123789&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;h5 id=&quot;slice、substr、substring&quot;&gt;&lt;a href=&quot;#slice、substr、substring&quot; class=&quot;headerlink&quot; title=&quot;slice、substr、substring&quot;&gt;&lt;/a&gt;slice、substr、substring&lt;/h5&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;2&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;3&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;4&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;这三个方法都会返回一个操作字符串后的字符串,&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;而且还接受一个或者两个参数第一个代表字符串开始的位置，&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;第二个数字为(对于slice和substring的第二个参数指的是字符串结束的位置)。&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;而substr()的第二个参数为字符串的长度&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
     
     </summary>
     
